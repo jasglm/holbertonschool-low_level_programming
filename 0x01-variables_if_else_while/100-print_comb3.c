@@ -3,8 +3,6 @@
 /**
  * main - Entry point
  *
- * Instruction: Print all possible combination of two digits
- * 
  * Return: Always 0 (Success)
  */
 int main(void)

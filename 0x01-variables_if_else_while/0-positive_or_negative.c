@@ -12,7 +12,7 @@
         n = rand() - RAND_MAX / 2;
         if (n > 0)
             printf("%i is positive", n);
-        if else (0 == 0)
+        if else (n == 0)
             printf("%i is zero", n);
     
         else

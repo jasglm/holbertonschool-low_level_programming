@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * times_table - prints the 9 times table, starting whit 0
+ * jack_bauer - prints every min of day starting 00:00 to 23:59
  *
  *
  */
-void times_table(void)
+void jack_bauer(void)
 {
 	int num, multi, answ;
 

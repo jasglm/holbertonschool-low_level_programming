@@ -1,19 +1,36 @@
 #include "main.h"
 
 /**
- *_strpbrk - return the first occurence of a string's char in a string.
- *@s: the first string.
- *@accept: the second string.
+ *_strstr - finds a string in a string.
+ *@haystack: first string.
+ *@needle: second string.
  *Return: char.
  */
 
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i;
 
-	for (i = 0; s[i]; i++)
-		for (j = 0; accept[j]; j++)
-			if (accept[j] == s[i])
-				return (s + i);
-	return (0);
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
+	{
+		i = 0;
+
+		if (haystack[i] == needle[i])
+		{
+			do {
+				if (needle[i + 1] == '\0')
+					return (haystack);
+
+				i++;
+
+			} while (haystack[i] == needle[i]);
+		}
+
+		haystack++;
+	}
+
+	return ('\0');
 }

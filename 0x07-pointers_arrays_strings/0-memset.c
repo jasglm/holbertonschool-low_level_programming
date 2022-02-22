@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _memset - return size of strlen
+ *_memset - return size of strlen
  * @s: pointer to string
  * @b: byte a llenar
  * @n: numero de espacios
@@ -16,4 +16,4 @@ char *_memset(char *s, char b, unsigned int n)
 		*(s + i) = b;
 	}
 	return (s);
-}
+} 

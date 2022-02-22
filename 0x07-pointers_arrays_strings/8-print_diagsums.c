@@ -1,25 +1,26 @@
 #include "main.h"
+
 #include <stdio.h>
+
 /**
- * print_diagsums - The _memcpy() function copies n bytes from memory
- * area src to memory area dest
- * @a: pointer to string
- * @size: byte a llenar
- * Return: dest
+ *print_diagsums - print the sum of the 2 diagonals of a matrix.
+ *@size: size of a square matrix.
+ *@a: the matrix.
  */
+
 void print_diagsums(int *a, int size)
 {
-	int i, j, p, l = 0, r = 0;
+	int i;
+	long int sum  = 0, sizem;
 
-	for (i = 0; i < size; i++)
-	{
-		p = (i * size) + i;
-		l += *(a + p);
-	}
-	for (j = 0; j < size; j++)
-	{
-		p = (j * size) + (size - 1 - j);
-		r += *(a + p);
-	}
-	printf("%i, %i\n", l, r);
+	sizem = size * size;
+	for (i = 0; i < sizem; i += size + 1)
+		sum += a[i];
+
+	printf("%li, ", sum);
+	sum = 0;
+
+	for (i = size - 1; i <= sizem - size + 1; i += size - 1)
+		sum += a[i];
+	printf("%li\n", sum);
 }

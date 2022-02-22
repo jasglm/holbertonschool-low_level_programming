@@ -1,21 +1,21 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_chessboard - The _memcpy() function copies n bytes from memory
- * area src to memory area dest
- * @a: pointer to string
- * Return: nothing
+ *print_chessboard - print a matrix .
+ *@a: matrix.
  */
+
 void print_chessboard(char (*a)[8])
 {
-	int b, c;
+	int i, j;
 
-	for (b = 0; b < 8; b++)
+	for (i = 0; i < 8; i++)
 	{
-		for (c = 0; c < 8; c++)
+		for (j = 0; j < 8; j++)
 		{
-			_putchar(a[b][c]);
+			_putchar(a[i][j]);
+			if (j == 7)
+				_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }

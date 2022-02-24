@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *sqrt - find a square root of an integer.
+ *sqrt - find a squae root of an integer.
  *@n: integer.
  *@i: counter.
  *Return: square root (n).
@@ -29,4 +29,4 @@ int _sqrt_recursion(int n)
 	if (n < 1)
 		return (-1);
 	return (sqrt(a, n));
-}
+}r
